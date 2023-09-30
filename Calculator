@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "RU");
+    int n;
+
+    string input;
+    char sign;
+
+    cout << "Введите два числа через знак математического действия без пробелов: ";
+    cin >> input;
+
+    int i = 0;
+    float num1, num2;
+    while (input[i] != '-' && input[i] != '+' && input[i] != '*' && input[i] != '/') {
+        i++;
+    }
+
+    num1 = stoi(input.substr(0, i));
+    num2 = stoi(input.substr(i + 1));
+    sign = input[i];
+    float res;
+    switch (sign) {
+    case '+':
+        res = num1 + num2;
+        break;
+    case '-':
+        res = num1 - num2;
+        break;
+    case '*':
+        res = num1 * num2;
+        break;
+    case '/':
+        res = num1 / num2;
+        break;
+    default: cout << "ERROR";
+        break;
+    }
+    cout << res;
+    return 0;
+}
