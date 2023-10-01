@@ -3,7 +3,10 @@
 
 using namespace std;
 
+
 int main() {
+    do
+    {
     int n;
 
     string input;
@@ -38,6 +41,8 @@ int main() {
     default: cout << "ERROR";
         break;
     }
-    cout << res;
+    cout << res << endl;
+    system("pause");
+    } while ("");
     return 0;
 }
