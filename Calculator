@@ -4,13 +4,12 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "RU");
     int n;
 
     string input;
     char sign;
 
-    cout << "Введите два числа через знак математического действия без пробелов: ";
+    cout << "Enter two numbers separated by a mathematical action sign without spaces: ";
     cin >> input;
 
     int i = 0;
